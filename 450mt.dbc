@@ -1,0 +1,139 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: CLU ABS ECU
+
+
+BO_ 272 ECU_h110: 8 ECU
+ SG_ checksum_h110 : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ engineSpeed : 16|8@1+ (64,0) [0|16320] "" Vector__XXX
+ SG_ engineTemperature : 32|8@1+ (0.75,-48) [-48|143.25] "C" Vector__XXX
+ SG_ counter_h110 : 8|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ fuelRate : 47|16@0+ (1,0) [0|65535] "uL/s" Vector__XXX
+ SG_ clutchLeverPressed : 61|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ sideStandUp : 59|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ neutralSelected : 63|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 273 ECU_h111: 8 ECU
+ SG_ checksum_h111 : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ throttle : 8|8@1+ (0.5,0) [0|127.5] "%" Vector__XXX
+ SG_ voltage : 48|8@1+ (0.1,0) [0|25.5] "V" Vector__XXX
+ SG_ counter_h111 : 57|4@1+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 288 CLU_h120: 8 CLU
+ SG_ currentGear : 40|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ counter_h120 : 52|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ checksum_h120 : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 291 ECU_h123: 8 ECU
+ SG_ torqueRequestDriver : 7|16@0+ (0.5,-2500) [-2500|30267.5] "%" Vector__XXX
+ SG_ torqueRequestApplied : 23|16@0+ (0.5,-2500) [-2500|30267.5] "%" Vector__XXX
+ SG_ counter_h123 : 52|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ checksum_h123 : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 299 ABS_h12B: 8 ABS
+ SG_ counter_h12B : 36|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ wheelSpeedFront : 3|12@0+ (0.05625,0) [0|230.34375] "km/h" Vector__XXX
+ SG_ wheelSpeedRear : 19|12@0+ (0.05625,0) [0|230.34375] "km/h" Vector__XXX
+ SG_ checksum_h12B : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ torqueLimitTraction : 47|16@0+ (0.5,-2500) [-2500|30267.5] "%" Vector__XXX
+
+BO_ 303 ABS_h12F: 8 ABS
+ SG_ counter_h12F : 52|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ checksum_h12F : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ AbsRearDisableAck : 31|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ TcDisableAck : 29|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ RegularBraking : 21|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ AbsFrontBraking : 16|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ AbsRearBraking : 17|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ AbsNotChecked : 19|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 337 CLU_h151: 8 CLU
+ SG_ mileageTotal : 31|24@0+ (0.1,0) [0|1677721.5] "km" Vector__XXX
+ SG_ generalSpeed : 56|8@1+ (1,0) [0|255] "km/h" Vector__XXX
+
+BO_ 339 CLU_h153: 8 CLU
+ SG_ fuelLevel : 7|8@0+ (1,0) [0|255] "%" Vector__XXX
+ SG_ mileageTrip1 : 13|14@0+ (0.1,0) [0|1638.3] "km" Vector__XXX
+ SG_ mileageTrip2 : 31|14@0+ (0.1,0) [0|1638.3] "km" Vector__XXX
+ SG_ highBeamOn : 41|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 340 CLU_h154: 8 CLU
+ SG_ mileageUntilService : 55|16@0+ (1,0) [0|65535] "km" Vector__XXX
+
+BO_ 355 CLU_h163: 8 CLU
+ SG_ timeTrip1 : 7|16@0+ (1,0) [0|65535] "minutes" Vector__XXX
+ SG_ timeTrip2 : 23|16@0+ (1,0) [0|65535] "minutes" Vector__XXX
+ SG_ timeTotal : 39|24@0+ (1,0) [0|16777215] "minutes" Vector__XXX
+
+BO_ 593 CLU_h251: 8 CLU
+ SG_ AbsRearDisableCmd : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ TcDisableCmd : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 755 CLU_h2F3: 8 CLU
+
+BO_ 782 CLU_h30E: 8 CLU
+ SG_ pressureFrontWheel : 7|10@0+ (1,0) [0|1023] "kPa" Vector__XXX
+ SG_ pressureRearWheel : 9|10@0+ (1,0) [0|1023] "kPa" Vector__XXX
+ SG_ temperatureFrontWheel : 24|8@1+ (1,-40) [-40|215] "C" Vector__XXX
+ SG_ temperatureRearWheel : 32|8@1+ (1,-40) [-40|215] "C" Vector__XXX
+ SG_ warningFrontWheel : 41|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ warningRearWheel : 45|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 1026 CLU_h402: 8 CLU
+
+
+
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 0;
+BA_DEF_  "MultiplexExtEnabled" ENUM  "No","Yes";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "MultiplexExtEnabled" "No";
+BA_DEF_DEF_  "BusType" "CAN";
+BA_ "GenMsgCycleTime" BO_ 272 10;
+BA_ "GenMsgCycleTime" BO_ 273 10;
+BA_ "GenMsgCycleTime" BO_ 288 20;
+BA_ "GenMsgCycleTime" BO_ 291 20;
+BA_ "GenMsgCycleTime" BO_ 299 10;
+BA_ "GenMsgCycleTime" BO_ 303 20;
+BA_ "GenMsgCycleTime" BO_ 337 50;
+BA_ "GenMsgCycleTime" BO_ 339 50;
+BA_ "GenMsgCycleTime" BO_ 340 50;
+BA_ "GenMsgCycleTime" BO_ 355 50;
+BA_ "GenMsgCycleTime" BO_ 593 100;
+BA_ "GenMsgCycleTime" BO_ 755 200;
+BA_ "GenMsgCycleTime" BO_ 782 500;
+BA_ "GenMsgCycleTime" BO_ 1026 1000;
+
